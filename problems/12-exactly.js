@@ -29,6 +29,14 @@ console.log(result4); // true
 
 function exactly(array, num, cb) {
   // Your code here
+  let trues = 0;
+
+  for (i = 0; i < array.length; i++) {
+    let curr = array[i];
+    if (cb(curr)) trues++;
+
+  }
+  return trues === num;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
