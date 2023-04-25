@@ -22,16 +22,13 @@ console.log(arr2); // [ 0, 9, 20 ]
 
 
 function mapMutator(array, cb) {
-  // Your code here
+//   // Your code here
 
   for (i = 0; i < array.length; i++) {
     let curr = array[i];
-    curr = cb(curr, i);
+    let res  = cb(curr, i);
+    array.splice(i, 1, res);
   }
-
-
-
-
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
