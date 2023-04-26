@@ -33,6 +33,12 @@ console.log(
 
 let xorSelect = function(array, cb1, cb2) {
   // Your code here
+  const newArr = array.filter((el) => {
+    const resOne = cb1(el);
+    const resTwo = cb2(el);
+    return resOne ^ resTwo;
+  })
+  return newArr;
 };
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

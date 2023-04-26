@@ -17,9 +17,12 @@ console.log(greaterCallbackValue(5, doubler, squarer));     // 25
 console.log(greaterCallbackValue(1, doubler, squarer));     // 2
 console.log(greaterCallbackValue(9, Math.sqrt, doubler));   // 18
 *******************************************************************************/
+//pass value to both functions
+//return higher value
 
 function greaterCallbackValue(val, cb1, cb2) {
   // Your code here
+  return Math.max(cb1(val), cb2(val));
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

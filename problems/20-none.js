@@ -27,9 +27,16 @@ let result4 = none([4, -5, 7, -1], function(n) {
 });
 console.log(result4);   // false
 *******************************************************************************/
+//loop through array
+//pass each value to cb
+//if any == true return false
 
 function none(array, cb) {
   // Your code here
+  const result = array.forEach( ele => {
+    if (cb(ele) === true) return false;
+  }); 
+  return true;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
